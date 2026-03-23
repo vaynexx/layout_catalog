@@ -1,27 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Catalog</title>
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="styles/index.scss"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <title>Catalog</title>
+  <link rel="stylesheet" href="./styles/index.scss">
+</head>
+<body>
 
-  <body>
-    <h1>Catalog</h1>
-  </body>
+<header class="header">
+  <img src="./images/logo.png" alt="logo" class="header__logo">
+
+  <nav class="nav">
+    <a href="#" class="nav__link is-active">Apple</a>
+    <a href="#" class="nav__link">Samsung</a>
+    <a href="#" class="nav__link">Xiaomi</a>
+    <a href="#" class="nav__link" data-qa="nav-hover">
+      Laptops & computers
+    </a>
+  </nav>
+</header>
+
+<main class="catalog">
+  <div class="catalog__grid">
+
+    <!-- CARD 1 -->
+    <article class="card" data-qa="card">
+      <img src="./images/imac.jpeg" alt="iMac" class="card__image">
+
+      <h3 class="card__title">Apple iMac 24"</h3>
+
+      <div class="card__stars stars">
+        <img src="./images/star-active.svg" class="stars__star">
+        <img src="./images/star-active.svg" class="stars__star">
+        <img src="./images/star-active.svg" class="stars__star">
+        <img src="./images/star-active.svg" class="stars__star">
+        <img src="./images/star.svg" class="stars__star">
+      </div>
+
+      <div class="card__price">$1299</div>
+
+      <a href="#" class="card__button" data-qa="card-hover">
+        Buy
+      </a>
+    </article>
+
+    <!-- CARD 2 -->
+    <article class="card">
+      <img src="./images/imac.jpeg" alt="iMac" class="card__image">
+      <h3 class="card__title">Apple iMac 24"</h3>
+
+      <div class="card__stars stars">
+        <img src="./images/star-active.svg" class="stars__star">
+        <img src="./images/star-active.svg" class="stars__star">
+        <img src="./images/star-active.svg" class="stars__star">
+        <img src="./images/star.svg" class="stars__star">
+        <img src="./images/star.svg" class="stars__star">
+      </div>
+
+      <div class="card__price">$1199</div>
+      <a href="#" class="card__button">Buy</a>
+    </article>
+
+    <!-- CARD 3 -->
+    <article class="card">
+      <img src="./images/imac.jpeg" alt="iMac" class="card__image">
+      <h3 class="card__title">Apple iMac 24"</h3>
+
+      <div class="card__stars stars">
+        <img src="./images/star-active.svg" class="stars__star">
+        <img src="./images/star-active.svg" class="stars__star">
+        <img src="./images/star.svg" class="stars__star">
+        <img src="./images/star.svg" class="stars__star">
+        <img src="./images/star.svg" class="stars__star">
+      </div>
+
+      <div class="card__price">$999</div>
+      <a href="#" class="card__button">Buy</a>
+    </article>
+
+  </div>
+</main>
+
+</body>
 </html>

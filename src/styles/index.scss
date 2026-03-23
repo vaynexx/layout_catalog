@@ -1,3 +1,129 @@
+// 🔹 Variables
+$color-main: #060b35;
+$color-accent: #00acdc;
+$color-hover-title: #34568b;
+
+$card-width: 200px;
+$transition: 0.3s;
+
+// 🔹 Reset
 body {
   margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+// 🔹 Header
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+
+  &__logo {
+    height: 40px;
+  }
+}
+
+// 🔹 Navigation
+.nav {
+  display: flex;
+  gap: 20px;
+
+  &__link {
+    text-decoration: none;
+    color: $color-main;
+    transition: color $transition;
+
+    &:hover {
+      color: $color-accent;
+    }
+
+    &.is-active {
+      font-weight: bold;
+    }
+  }
+}
+
+// 🔹 Catalog
+.catalog {
+  padding: 50px 40px;
+
+  &__grid {
+    display: grid;
+    justify-content: center;
+    gap: 46px 48px;
+
+    grid-template-columns: 1fr;
+
+    @media (min-width: 488px) {
+      grid-template-columns: repeat(2, $card-width);
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, $card-width);
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, $card-width);
+    }
+  }
+}
+
+// 🔹 Stars
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+// 🔹 Card
+.card {
+  width: $card-width;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  transition: transform $transition;
+
+  &__image {
+    width: 100%;
+  }
+
+  &__title {
+    margin: 10px 0;
+    transition: color $transition;
+  }
+
+  &__price {
+    margin: 10px 0;
+    font-weight: bold;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 8px 12px;
+    background: $color-accent;
+    color: #fff;
+    text-decoration: none;
+    transition: all $transition;
+  }
+
+  // 🔥 Hover ефекти
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:hover &__title {
+    color: $color-hover-title;
+  }
+
+  &__button:hover {
+    background: #fff;
+    color: $color-accent;
+    border: 1px solid $color-accent;
+  }
 }
